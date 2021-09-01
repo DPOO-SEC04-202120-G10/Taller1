@@ -3,7 +3,7 @@ package uniandes.dpoo.modelo;
 public class Pedido {
 	
 	private int numeroPedido;
-	
+	//iwefjweofnrowgnwo
 	private int idPedido;
 	
 	private String nombreCliente;

@@ -6,7 +6,7 @@ import uniandes.dpoo.taller0.modelo.Pais;
 public class Combo {
 
 	private double descuento;
-	
+	//owfwoñfwfwfwrklu
 	private String nombre; 
 	
 	public Combo(double descuento, String nombre) {
