@@ -14,11 +14,12 @@ public  void cerrarYGuardarPedido()
 	
 }
 public getPedidoEnCurso() 
-{return Pedido
+{
+	return Pedido
 		
 }
 public getMenuBase()
-{ return ArrayList&lt;Producto&gt
+{ return ArrayList&lt;Producto&gt;
 
 }
 public void cargarInformacionRestaurante(File archivoIngredientes, File archivoMenu, File archivoCombos)
