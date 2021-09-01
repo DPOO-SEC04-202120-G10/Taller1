@@ -1,12 +1,11 @@
 package uniandes.dpoo.modelo;
 
-import uniandes.dpoo.taller0.modelo.Genero;
+
 import uniandes.dpoo.taller0.modelo.Pais;
 
-public class Combo {
+public class Combo implements Producto{
 
 	private double descuento;
-	//owfwoñfwfwfwrklu
 	private String nombre; 
 	
 	public Combo(double descuento, String nombre) {
@@ -23,8 +22,8 @@ public class Combo {
 	}
 	
 	
-	public generarTextoFactura() {
-		
+	public String generarTextoFactura() {
+		return factura
 	}
 	
 	public String getNombre() {

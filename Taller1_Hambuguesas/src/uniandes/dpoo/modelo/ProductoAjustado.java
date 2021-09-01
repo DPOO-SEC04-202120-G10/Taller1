@@ -1,6 +1,6 @@
 package uniandes.dpoo.modelo;
 
-public class ProductoAjustado {
+public class ProductoAjustado implements Producto {
 	public ProductoAjustado(ProductoMenu base);
 	{
 		

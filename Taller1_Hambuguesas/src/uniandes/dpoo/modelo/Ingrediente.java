@@ -18,6 +18,5 @@ public class Ingrediente {
 	public int getCostoAdicional() {
 		return costoAdicional;
 	}
-	// fweo´fnofóglw
 
 }
