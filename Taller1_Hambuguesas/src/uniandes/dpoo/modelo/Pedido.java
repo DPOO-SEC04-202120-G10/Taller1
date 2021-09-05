@@ -14,12 +14,6 @@ public class Pedido {
 	
 	public ArrayList<Producto> itemsPedido;
 	
-	//public double precioNetoPedido;
-	
-	//public double precioTotalPedido;
-	
-	//public double precioIVAPedido;
-	
 	public boolean activo;
 	
 	public Pedido(String nombreCliente, String direccionCliente) {
@@ -55,8 +49,8 @@ public class Pedido {
 	}
 	
 	
-	private double getPrecioIVAPedido(double precioTotalPedido) {
-		double precioIVAPedido = 0.19*precioTotalPedido;
+	private double getPrecioIVAPedido(double precioNetoPedido) {
+		double precioIVAPedido = 0.19*precioNetoPedido;
 		return precioIVAPedido;
 		
 	}
@@ -68,6 +62,8 @@ public class Pedido {
 			var texto = elItem.generarTextoFactura();
 			textoFactura = textoFactura + "%n" + texto;
 		}
+		
+		textoFactura = textoFactura + "%n" + "Precio Neto: " + getPrecioNetoPedido() + "%n" + "IVA: " + getPrecioIVAPedido(getPrecioNetoPedido()) + "%n" +"Precio Total: " + getPrecioTotalPedido();
 		
 		return textoFactura;
 	}

@@ -48,7 +48,7 @@ public class ProductoAjustado implements Producto {
 		
 		for (int i = 0; i < eliminados.size(); i++){
 			var elIngrediente = agregados.get(i);
-			textoFactura = textoFactura + "- " + elIngrediente.getNombre() + ": " + "0";
+			textoFactura = textoFactura + "%n" + "- " + elIngrediente.getNombre() + ": " + "0";
 		}
 		
 		return textoFactura;

@@ -25,7 +25,9 @@ public class Restaurante {
 	public Restaurante()
 		{	
 			this.pedidosCerrados = new ArrayList<Pedido>();
-			
+			this.menuBase = new ArrayList<ProductoMenu>();
+			this.combos = new ArrayList<Combo>();
+			this.ingredientes = new ArrayList<Ingrediente>();
 		}
 		
 	public void iniciarPedido(String nombreCliente, String direccionCliente)

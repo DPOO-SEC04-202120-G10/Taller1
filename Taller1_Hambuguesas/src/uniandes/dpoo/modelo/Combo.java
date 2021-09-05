@@ -29,7 +29,7 @@ public class Combo implements Producto{
 			precio = precio + elProducto.getPrecio();
 		}
 		
-		precio = precio * descuento;
+		precio = precio * (1-descuento);
 		
 		return precio;
 	}
