@@ -1,7 +1,7 @@
 package uniandes.dpoo.modelo;
 
 interface Producto {
-	public int getPrecio();
+	public double getPrecio();
 	public String getNombre();
 	public String generarTextoFactura();
 }

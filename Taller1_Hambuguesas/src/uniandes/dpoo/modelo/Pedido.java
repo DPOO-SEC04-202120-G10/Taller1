@@ -1,14 +1,26 @@
 package uniandes.dpoo.modelo;
 
+import java.util.ArrayList;
+
 public class Pedido {
 	
 	private int numeroPedido;
-	//iwefjweofnrowgnwo
+	
 	private int idPedido;
 	
 	private String nombreCliente;
 	
 	private String direccionCliente;
+	
+	public ArrayList<Producto> itemsPedido;
+	
+	//public double precioNetoPedido;
+	
+	//public double precioTotalPedido;
+	
+	//public double precioIVAPedido;
+	
+	public boolean activo;
 	
 	public Pedido(String nombreCliente, String direccionCliente) {
 		this.nombreCliente = nombreCliente;
@@ -20,30 +32,46 @@ public class Pedido {
 	}
 	
 	public void agregarProducto(Producto nuevoItem) {
-		
+		itemsPedido.add(nuevoItem);
 	}
 	
 
-	private int getPrecioNetoPedido() {
+	private double getPrecioTotalPedido() {
+		double precioNetoPedido = getPrecioNetoPedido();
+		double precioIVAPedido = getPrecioIVAPedido(precioNetoPedido);
+		var precioTotalPedido = precioNetoPedido + precioIVAPedido;
+		return precioTotalPedido; 
 		
 	}
 	
 	
-	private int getPrecioTotalPedido() {
-		
+	private double getPrecioNetoPedido() {
+		double precioNetoPedido = 0;
+		for (int i = 0; i < itemsPedido.size(); i++){
+			var elItem = itemsPedido.get(i);
+			precioNetoPedido = precioNetoPedido + elItem.getPrecio();
+		}
+		return precioNetoPedido;
 	}
 	
 	
-	private int getPrecioIVAPedido() {
+	private double getPrecioIVAPedido(double precioTotalPedido) {
+		double precioIVAPedido = 0.19*precioTotalPedido;
+		return precioIVAPedido;
 		
 	}
 	
 	private String generarTextoFactura() {
+		String textoFactura = "";
+		for (int i = 0; i < itemsPedido.size(); i++){
+			var elItem = itemsPedido.get(i);
+			var texto = elItem.generarTextoFactura();
+			textoFactura = textoFactura + "%n" + texto;
+		}
 		
+		return textoFactura;
 	}
 	
-	public void guardarFactura(File archivo) {
-		
-	}
+
 
 }

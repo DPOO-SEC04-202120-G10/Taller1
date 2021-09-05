@@ -15,12 +15,14 @@ public class ProductoMenu implements Producto{
 	{
 		return nombre;
 	}
-	public  int getPrecio()
+	public double getPrecio()
 	{
 		return precioBase;
 	}
 	public String generarTextoFactura()
 	{
-		return factura;
+		String textoFactura;
+		textoFactura = getNombre() + ": " + getPrecio();
+		return textoFactura;
 	}
 }
