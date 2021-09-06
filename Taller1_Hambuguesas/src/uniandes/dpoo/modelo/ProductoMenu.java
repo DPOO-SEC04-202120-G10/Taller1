@@ -27,7 +27,7 @@ public class ProductoMenu implements Producto{
 		return textoFactura;
 	}
 	
-	public void añadirCalorias(int calorias) {
+	public void anadirCalorias(int calorias) {
 		this.calorias = calorias;
 	}
 	

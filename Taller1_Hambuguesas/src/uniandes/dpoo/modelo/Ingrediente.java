@@ -21,7 +21,7 @@ public class Ingrediente {
 		return costoAdicional;
 	}
 	
-	public void añadirCalorias(int calorias) {
+	public void anadirCalorias(int calorias) {
 		this.calorias = calorias;
 	}
 	

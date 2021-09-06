@@ -35,7 +35,7 @@ public class ProductoAjustado implements Producto {
 		return precioTotal;
 	}
 	
-	public  void añadirIngrediente(Ingrediente elIngrediente)
+	public  void anadirIngrediente(Ingrediente elIngrediente)
 	{
 		agregados.add(elIngrediente);
 	}

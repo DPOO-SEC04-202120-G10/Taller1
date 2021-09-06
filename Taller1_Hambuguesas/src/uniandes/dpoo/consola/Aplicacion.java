@@ -121,7 +121,7 @@ private static int idPedido;
 		a=a+1;
 		}
 }
-	private static void añadirElementos(ProductoMenu elProducto, Restaurante elRestaurante)
+	private static void anadirElementos(ProductoMenu elProducto, Restaurante elRestaurante)
 	{
 	ProductoAjustado elProductoAjustado= new ProductoAjustado(elProducto);
 	String suma= input("Quiere añadir igredientes al producto?:"+ "\n 1. Si "
@@ -139,7 +139,7 @@ private static int idPedido;
 	
 	if (a==b)
 	{
-		elProductoAjustado.añadirIngrediente(i); 
+		elProductoAjustado.anadirIngrediente(i); 
 	}
 	b=b+1;
 }
@@ -194,7 +194,7 @@ private static int idPedido;
 								
 								if (a==b)
 								{
-									añadirElementos(i, elRestaurante);
+									anadirElementos(i, elRestaurante);
 ;
 								Pedido.agregarProducto(i);
 								
@@ -218,7 +218,7 @@ private static int idPedido;
 					
 					if (a==b)
 					{
-						añadirElementos(i, elRestaurante);
+						anadirElementos(i, elRestaurante);
 
 						Pedido.agregarProducto(i);
 						}
