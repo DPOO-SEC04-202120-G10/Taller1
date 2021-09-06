@@ -65,10 +65,19 @@ public class Pedido {
 		}
 		
 		textoFactura = textoFactura + "%n" + "Precio Neto: " + getPrecioNetoPedido() + "%n" + "IVA: " + getPrecioIVAPedido(getPrecioNetoPedido()) + "%n" +"Precio Total: " + getPrecioTotalPedido();
-		
+		textoFactura = textoFactura + "%n" + "Calorias totales: " + getCaloriasTotales();
 		return textoFactura;
 	}
 	
+	public int getCaloriasTotales() {
+		int caloriasTotales = 0;
+		for (int i = 0; i < itemsPedido.size(); i++){
+			var item = itemsPedido.get(i);
+			var cal = item.getCalorias(); 
+			caloriasTotales = caloriasTotales + cal;
+		}
+		return caloriasTotales;
+	}
 
 
 }

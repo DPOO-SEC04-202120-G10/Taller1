@@ -139,7 +139,7 @@ private static int idPedido;
 	
 	if (a==b)
 	{
-		elProductoAjustado.añadirIngrediente(i); 
+		elProductoAjustado.anadirIngrediente(i); 
 	}
 	b=b+1;
 }

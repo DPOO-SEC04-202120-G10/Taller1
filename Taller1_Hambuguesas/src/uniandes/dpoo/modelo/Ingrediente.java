@@ -6,6 +6,8 @@ public class Ingrediente {
 	
 	private int costoAdicional;
 	
+	private int calorias;
+	
 	public Ingrediente(String nombre, int costoAdicional) {
 		this.nombre = nombre;
 		this.costoAdicional = costoAdicional;
@@ -17,6 +19,14 @@ public class Ingrediente {
 	
 	public int getCostoAdicional() {
 		return costoAdicional;
+	}
+	
+	public void anadirCalorias(int calorias) {
+		this.calorias = calorias;
+	}
+	
+	public int getCalorias() {
+		return calorias;
 	}
 
 }
