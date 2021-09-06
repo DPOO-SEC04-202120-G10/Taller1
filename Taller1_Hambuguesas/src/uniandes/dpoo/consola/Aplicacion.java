@@ -9,7 +9,6 @@ import uniandes.dpoo.modelo.ProductoMenu;
 import uniandes.dpoo.modelo.Restaurante;
 import java.io.*;
 import java.io.BufferedReader;
-import java.util;
 
 
 
@@ -99,7 +98,7 @@ private static int idPedido;
 		}
 			
 		}
-	private void ejecutarMostrarIngredientes(Restaurante elRestaurante)
+	private static void ejecutarMostrarIngredientes(Restaurante elRestaurante)
 	{
 	System.out.println("\n" + "Ingredientes Adicionales" + "\n");
 	int a= 0;
@@ -122,7 +121,7 @@ private static int idPedido;
 		a=a+1;
 		}
 }
-	private void añadirElementos(ProductoMenu elProducto, Restaurante elRestaurante)
+	private static void añadirElementos(ProductoMenu elProducto, Restaurante elRestaurante)
 	{
 	ProductoAjustado elProductoAjustado= new ProductoAjustado(elProducto);
 	String suma= input("Quiere añadir igredientes al producto?:"+ "\n 1. Si "
