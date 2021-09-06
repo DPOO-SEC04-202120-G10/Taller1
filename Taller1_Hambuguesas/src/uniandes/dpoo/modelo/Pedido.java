@@ -12,20 +12,21 @@ public class Pedido {
 	
 	private String direccionCliente;
 	
-	public ArrayList<Producto> itemsPedido;
+	public static ArrayList<Producto> itemsPedido;
 	
 	public boolean activo;
 	
-	public Pedido(String nombreCliente, String direccionCliente) {
+	public Pedido(String nombreCliente, String direccionCliente, int idPedido) {
 		this.nombreCliente = nombreCliente;
 		this.direccionCliente = direccionCliente;
+		this.idPedido= idPedido;
 	}
 	
 	public int getIdPedido() {
 		return idPedido;
 	}
 	
-	public void agregarProducto(Producto nuevoItem) {
+	public static void agregarProducto(Producto nuevoItem) {
 		itemsPedido.add(nuevoItem);
 	}
 	

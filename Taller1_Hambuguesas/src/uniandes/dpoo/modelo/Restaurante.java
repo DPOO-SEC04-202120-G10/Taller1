@@ -15,11 +15,11 @@ import java.io.IOException;
 
 public class Restaurante {
 	
-	private ArrayList<Pedido> pedidosCerrados;
-	private Pedido pedidoEnCurso;
-	private ArrayList<ProductoMenu> menuBase;
-	private ArrayList<Combo> combos;
-	public ArrayList<Ingrediente> ingredientes;
+	public ArrayList<Pedido> pedidosCerrados;
+	public Pedido pedidoEnCurso;
+	public  ArrayList<ProductoMenu> menuBase;
+	public  ArrayList<Combo> combos;
+	public  ArrayList<Ingrediente> ingredientes;
 	
 	
 	public Restaurante()
@@ -30,9 +30,9 @@ public class Restaurante {
 			this.ingredientes = new ArrayList<Ingrediente>();
 		}
 		
-	public void iniciarPedido(String nombreCliente, String direccionCliente)
+	public  void iniciarPedido(String nombreCliente, String direccionCliente, int idPedido )
 		{
-			this.pedidoEnCurso = new Pedido(nombreCliente, direccionCliente);
+			this.pedidoEnCurso = new Pedido(nombreCliente, direccionCliente,idPedido);
 		}
 	
 	public  void cerrarYGuardarPedido()
@@ -40,21 +40,30 @@ public class Restaurante {
 			pedidosCerrados.add(this.pedidoEnCurso);
 			this.pedidoEnCurso = null;
 		}
-	
+	public  ArrayList<Pedido> getPedidosCerrados() 
+	{
+
+		return pedidosCerrados;
+	}
 	public Pedido getPedidoEnCurso() 
 		{
 			return pedidoEnCurso;
 		}
 	
-	public ArrayList<ProductoMenu> getMenuBase()
+	public  ArrayList<ProductoMenu> getMenuBase()
 		{ 
 			return menuBase;
 		}
 	
-	public ArrayList<Ingrediente> getIngredientes()
+	public  ArrayList<Ingrediente> getIngredientes()
 		{
 			return ingredientes;
 		}
+	public   ArrayList<Combo> getCombo()
+	{
+		return combos;
+		
+	}
 	
 	public void cargarInformacionRestaurante(String archivoIngredientes, String archivoMenu, String archivoCombos) throws FileNotFoundException, IOException
 		{
@@ -65,18 +74,44 @@ public class Restaurante {
 		}
 	private void cargarIngredientes(String archivoIngredientes) throws FileNotFoundException, IOException
 		{
-			var ingredientes = LoaderInformacionArchivos.leerInfoArchivoIngredientes(archivoIngredientes);
+			
+			try {
+				this.ingredientes = LoaderInformacionArchivos.leerInfoArchivoIngredientes(archivoIngredientes);
+			}
+			catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 		
 	
 	private void cargarMenu(String archivoMenu) throws FileNotFoundException, IOException
 		{
-			var menuBase = LoaderInformacionArchivos.leerInfoArchivoProductosMenu(archivoMenu);
+		try {
+		
+			this.menuBase = LoaderInformacionArchivos.leerInfoArchivoProductosMenu(archivoMenu);
 		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+		}	
 	
 	private void cargarCombos(String archivoCombos) throws FileNotFoundException, IOException
 		{
-			var combos = LoaderInformacionArchivos.leerInfoArchivoCombos(archivoCombos, menuBase);
+		try {
+			this.combos = LoaderInformacionArchivos.leerInfoArchivoCombos(archivoCombos, menuBase);
 		}
+			catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			catch (IOException e) {
+				e.printStackTrace();
+			}
+			}
 
 }

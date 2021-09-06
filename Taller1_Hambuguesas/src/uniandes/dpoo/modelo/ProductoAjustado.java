@@ -35,7 +35,14 @@ public class ProductoAjustado implements Producto {
 		return precioTotal;
 	}
 	
-	
+	public  void añadirIngrediente(Ingrediente elIngrediente)
+	{
+		agregados.add(elIngrediente);
+	}
+	public void eliminarIngrediente(Ingrediente elIngrediente)
+	{
+		eliminados.add(elIngrediente);
+	}
 	public String generarTextoFactura()
 	{
 		String textoFactura;
