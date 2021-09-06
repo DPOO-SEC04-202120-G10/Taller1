@@ -32,6 +32,7 @@ public class LoaderInformacionArchivos {
 			String[] partes = linea.split(";");
 			
 			ProductoMenu nuevoProducto = new ProductoMenu(partes[0], Integer.parseInt(partes[1]));   // Creacion de un objeto ProductoMenu con su nombre y precio base
+			nuevoProducto.añadirCalorias(Integer.parseInt(partes[2]));
 			productosMenu.add( nuevoProducto );
 
 			linea = br.readLine(); // leer la proxima linea en el archivo con un nuevo ProductoMenu 
@@ -100,6 +101,7 @@ public class LoaderInformacionArchivos {
 			String[] partes = linea.split(";");
 			
 			Ingrediente nuevoIngrediente = new Ingrediente(partes[0], Integer.parseInt(partes[1]));  
+			nuevoIngrediente.añadirCalorias(Integer.parseInt(partes[2]));
 			ingredientes.add(nuevoIngrediente);
 
 			linea = br.readLine(); 

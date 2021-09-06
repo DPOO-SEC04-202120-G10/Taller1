@@ -54,5 +54,24 @@ public class ProductoAjustado implements Producto {
 		return textoFactura;
 		 
 	}
+	
+	public int getCalorias() {
+		int caloriasTotales = base.getCalorias();
+		
+		for (int i = 0; i < agregados.size(); i++){
+			var item = agregados.get(i);
+			var cal = item.getCalorias(); 
+			caloriasTotales = caloriasTotales + cal;
+		}
+		
+		for (int i = 0; i < eliminados.size(); i++){
+			var item = agregados.get(i);
+			var cal = item.getCalorias(); 
+			caloriasTotales = caloriasTotales - cal;
+		}
+
+		
+		return caloriasTotales;
+	}
 
 }

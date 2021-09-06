@@ -45,4 +45,14 @@ public class Combo implements Producto{
 		return nombre;
 	}
 	
+	public int getCalorias() {
+		int caloriasTotales = 0;
+		for (int i = 0; i < itemsCombo.size(); i++){
+			var item = itemsCombo.get(i);
+			var cal = item.getCalorias(); 
+			caloriasTotales = caloriasTotales + cal;
+		}
+		return caloriasTotales;
+	}
+	
 }
