@@ -48,16 +48,16 @@ public class ProductoAjustado implements Producto {
 	public String generarTextoFactura()
 	{
 		String textoFactura;
-		textoFactura = base.getNombre() + ": " + base.getPrecio() + "%n";
+		textoFactura = base.getNombre() + ": " + base.getPrecio() + "\n";
 		
 		for (int i = 0; i < agregados.size(); i++){
 			var elIngrediente = agregados.get(i);
-			textoFactura = textoFactura + "%n" + "+ " + elIngrediente.getNombre() + ": " + elIngrediente.getCostoAdicional();
+			textoFactura = textoFactura + "\n" + "+ " + elIngrediente.getNombre() + ": " + elIngrediente.getCostoAdicional();
  		}
 		
 		for (int i = 0; i < eliminados.size(); i++){
-			var elIngrediente = agregados.get(i);
-			textoFactura = textoFactura + "%n" + "- " + elIngrediente.getNombre() + ": " + "0";
+			var elIngrediente = eliminados.get(i);
+			textoFactura = textoFactura + "\n" + "- " + elIngrediente.getNombre() + ": " + "0";
 		}
 		
 		return textoFactura;

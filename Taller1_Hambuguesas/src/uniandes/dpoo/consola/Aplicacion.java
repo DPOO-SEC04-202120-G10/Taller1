@@ -243,14 +243,14 @@ private static Scanner inputScanner = new Scanner(System.in);
 	}
 	private void ejecutarVerPedidoPasado(Restaurante elRestaurante)
 	{
-		String id =input ("Ingrese el id de su pedido");
-		int id1=Integer.parseInt(id);
-		
+		System.out.println("Ingrese el id de su pedido.");
+		int id1 = inputScanner.nextInt();
+	
 		for (Pedido i:(elRestaurante.getPedidosCerrados()))
 		{
 		if (id1==(i.getIdPedido()))
 				{
-			System.out.println(i);
+			System.out.println(i.generarTextoFactura());
 			
 				}
 		};

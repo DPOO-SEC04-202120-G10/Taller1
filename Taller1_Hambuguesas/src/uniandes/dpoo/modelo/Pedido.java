@@ -62,11 +62,13 @@ public class Pedido {
 		for (int i = 0; i < itemsPedido.size(); i++){
 			var elItem = itemsPedido.get(i);
 			var texto = elItem.generarTextoFactura();
-			textoFactura = textoFactura + "%n" + texto;
+			textoFactura = textoFactura + "\n" + texto;
 		}
 		
-		textoFactura = textoFactura + "%n" + "Precio Neto: " + getPrecioNetoPedido() + "%n" + "IVA: " + getPrecioIVAPedido(getPrecioNetoPedido()) + "%n" +"Precio Total: " + getPrecioTotalPedido();
-		textoFactura = textoFactura + "%n" + "Calorias totales: " + getCaloriasTotales();
+		textoFactura = textoFactura + "\n" + "Precio Neto: " + getPrecioNetoPedido() + "\n" + "IVA: " + getPrecioIVAPedido(getPrecioNetoPedido()) + "\n" +"Precio Total: " + getPrecioTotalPedido();
+		textoFactura = textoFactura + "\n" + "Calorias totales: " + getCaloriasTotales();
+		
+		textoFactura = textoFactura + "\n" + "Cliente: " +nombreCliente + "\n" + "Direccion: " + direccionCliente;
 		return textoFactura;
 	}
 	
