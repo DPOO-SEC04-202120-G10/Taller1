@@ -20,13 +20,14 @@ public class Pedido {
 		this.nombreCliente = nombreCliente;
 		this.direccionCliente = direccionCliente;
 		this.idPedido= idPedido;
+		this.itemsPedido = new ArrayList<Producto>();
 	}
 	
 	public int getIdPedido() {
 		return idPedido;
 	}
 	
-	public static void agregarProducto(Producto nuevoItem) {
+	public void agregarProducto(Producto nuevoItem) {
 		itemsPedido.add(nuevoItem);
 	}
 	
@@ -56,7 +57,7 @@ public class Pedido {
 		
 	}
 	
-	private String generarTextoFactura() {
+	public String generarTextoFactura() {
 		String textoFactura = "";
 		for (int i = 0; i < itemsPedido.size(); i++){
 			var elItem = itemsPedido.get(i);

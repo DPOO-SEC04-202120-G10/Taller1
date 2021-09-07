@@ -12,6 +12,8 @@ public class ProductoAjustado implements Producto {
 	{
 		this.base = base; 
 		this.nombre = base.getNombre() + " ajustado";
+		this.agregados = new ArrayList<Ingrediente>();
+		this.eliminados = new ArrayList<Ingrediente>();
 		
 	}
 	

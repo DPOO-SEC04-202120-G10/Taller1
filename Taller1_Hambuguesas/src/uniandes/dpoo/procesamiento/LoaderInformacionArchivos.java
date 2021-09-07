@@ -86,6 +86,8 @@ public class LoaderInformacionArchivos {
 		}
 		br.close();
 		return combos;
+		
+		
 	}
 	
 	public static ArrayList<Ingrediente> leerInfoArchivoIngredientes(String rutaArchivo) throws FileNotFoundException, IOException
