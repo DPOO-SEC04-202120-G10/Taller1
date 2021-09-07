@@ -38,7 +38,9 @@ public class Restaurante {
 	public  void cerrarYGuardarPedido()
 		{
 			pedidosCerrados.add(this.pedidoEnCurso);
+			pedidoEnCurso.generarTextoFactura();
 			this.pedidoEnCurso = null;
+			
 		}
 	public  ArrayList<Pedido> getPedidosCerrados() 
 	{
