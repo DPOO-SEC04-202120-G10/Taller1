@@ -18,7 +18,7 @@ private static int idPedido;
 		// TODO Auto-generated method stub
 		System.out.println("Inicio de ejecuci�n de la aplicaci�n");
 		Restaurante elRestaurante= new Restaurante();
-		ejecutarAplicacion (elRestaurante);
+		ejecutarAplicacion(elRestaurante);
 		
 	}
 	public static void ejecutarAplicacion(Restaurante elRestaurante)
@@ -42,7 +42,7 @@ private static int idPedido;
 			try
 			{
 				mostrarMenu();
-				String opcion_seleccionadaa = (input("Por favor seleccione una opcion"));
+				String opcion_seleccionadaa = input("Por favor seleccione una opcion");
 				int opcion_seleccionada= Integer.parseInt(opcion_seleccionadaa);
 	
 				if (opcion_seleccionada == 1)
