@@ -42,10 +42,9 @@ private static int idPedido;
 			try
 			{
 				mostrarMenu();
-				String opcion_seleccionadaa = (input("Por favor seleccione una opción"));
+				String opcion_seleccionadaa = (input("Por favor seleccione una opcion"));
 				int opcion_seleccionada= Integer.parseInt(opcion_seleccionadaa);
-				
-			
+	
 				if (opcion_seleccionada == 1)
 					ejecutarMostrarMenu(elRestaurante);
 				else if (opcion_seleccionada == 2)
