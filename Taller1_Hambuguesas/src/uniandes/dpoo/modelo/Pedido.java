@@ -56,7 +56,7 @@ public class Pedido {
 		
 	}
 	
-	private String generarTextoFactura() {
+	public String generarTextoFactura() {
 		String textoFactura = "";
 		for (int i = 0; i < itemsPedido.size(); i++){
 			var elItem = itemsPedido.get(i);

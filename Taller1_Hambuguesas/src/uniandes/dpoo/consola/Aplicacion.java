@@ -16,7 +16,7 @@ public class Aplicacion {
 private static int idPedido;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Inicio de ejecuci�n de la aplicaci�n");
+		System.out.println("Inicio de ejecucion de la aplicacion");
 		Restaurante elRestaurante= new Restaurante();
 		ejecutarAplicacion(elRestaurante);
 		
@@ -77,7 +77,7 @@ private static int idPedido;
 	
 	public static void mostrarMenu()
 	{
-		System.out.println("\nOpciones de la aplicación\n");
+		System.out.println("\nOpciones de la aplicacion\n");
 		System.out.println("1. Ver el Menu");
 		System.out.println("2. Ver el Combo");
 		System.out.println("3. Iniciar Un nuevo Pedido");
@@ -254,8 +254,15 @@ private static int idPedido;
 	{
 		String id =input ("Ingrese el id de su pedido");
 		int id1=Integer.parseInt(id);
-		;
-		for (Pedido i:(elRestaurante.getPedidosCerrados()));
+		
+		for (Pedido i:(elRestaurante.getPedidosCerrados()))
+		{
+		if (id1==(i.getIdPedido()))
+				{
+			System.out.println(i);
+			
+				}
+		};
 		
 		
 	}
