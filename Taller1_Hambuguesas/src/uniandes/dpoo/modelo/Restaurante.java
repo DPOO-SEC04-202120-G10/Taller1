@@ -20,6 +20,7 @@ public class Restaurante {
 	public  ArrayList<ProductoMenu> menuBase;
 	public  ArrayList<Combo> combos;
 	public  ArrayList<Ingrediente> ingredientes;
+	public  ArrayList<Bebida> bebidas;
 	
 	
 	public Restaurante()
@@ -28,6 +29,7 @@ public class Restaurante {
 			this.menuBase = new ArrayList<ProductoMenu>();
 			this.combos = new ArrayList<Combo>();
 			this.ingredientes = new ArrayList<Ingrediente>();
+			this.bebidas = new ArrayList<Bebida>();
 		}
 		
 	public  void iniciarPedido(String nombreCliente, String direccionCliente, int idPedido )
